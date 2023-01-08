@@ -35,6 +35,6 @@ public class FryMeat : MonoBehaviour
         yield return new WaitForSeconds(5);
         isCooked = true;
         this.gameObject.transform.SetParent(null);
-        meatMat.material.color = new Color(.3f, .3f, .3f);
+        meatMat.material.color = new Color32(111, 78, 55, 1);
     }
 }
