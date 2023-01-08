@@ -5,6 +5,7 @@ using UnityEngine;
 public class FryMeat : MonoBehaviour
 {    
     private MeshRenderer meatMat;
+    private bool isCooked = false;
 
     // Start is called before the first frame update
     void Start()
@@ -13,16 +14,12 @@ public class FryMeat : MonoBehaviour
         meatMat = GetComponentInChildren<MeshRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //Put it in the pan
     private void OnTriggerEnter(Collider other)
     {
-        //Once the meat is placed into the pan, start frying it
+        //Start frying it
         //Parent them together so that it does not move out of the pan
-        if (other.gameObject.layer == 6)
+        if (other.gameObject.layer == 6 && !isCooked)
         {
             StartCoroutine(CookTimer());
             Debug.Log("Started Cooking");
@@ -36,7 +33,7 @@ public class FryMeat : MonoBehaviour
     IEnumerator CookTimer()
     {
         yield return new WaitForSeconds(5);
-        Debug.Log("Finished Cooking");
+        isCooked = true;
         this.gameObject.transform.SetParent(null);
         meatMat.material.color = new Color(.3f, .3f, .3f);
     }
