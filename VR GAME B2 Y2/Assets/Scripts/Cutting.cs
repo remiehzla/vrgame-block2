@@ -5,6 +5,8 @@ using UnityEngine;
 public class Cutting : MonoBehaviour
 {
     Vector3 randomAngle;
+    GameObject parent;
+    public GameObject prefab;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,8 @@ public class Cutting : MonoBehaviour
                                       Random.Range(-2f, 2f));
 
             other.gameObject.GetComponent<Rigidbody>().AddForce(randomAngle * Random.Range(.3f, .6f), ForceMode.Impulse);
+
+            // Need to think how to add HGI as childs
         }
     }
 }
