@@ -23,28 +23,23 @@ public class Pouring : MonoBehaviour
     {
         if (transform.rotation.eulerAngles.x > 80)
         {
+            particles.Emit(1);
             isPouring = true;
         }
         if (transform.rotation.eulerAngles.x < -80)
         {
+            particles.Emit(1);
             isPouring = true;
         }
         if (transform.rotation.eulerAngles.z > 80)
         {
+            particles.Emit(1);
             isPouring = true;
         }
         if (transform.rotation.eulerAngles.z < -80)
         {
+            particles.Emit(1);
             isPouring = true;
-        }
-
-        if (isPouring)
-        {
-            particles.Play();
-        }
-        else
-        {
-            particles.Pause();
         }
 
         if (triggered && isPouring)
