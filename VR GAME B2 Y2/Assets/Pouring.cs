@@ -6,7 +6,8 @@ public class Pouring : MonoBehaviour
 {
     [SerializeField] private PouringTrigger pouringTrigger;
     private ParticleSystem particles;
-    bool spillLiquid = false;
+    bool isPouring = false;
+    bool triggered;
 
     [SerializeField] private float minParticleCount;
     private float particleCount;
@@ -22,19 +23,33 @@ public class Pouring : MonoBehaviour
     {
         if (transform.rotation.eulerAngles.x > 80)
         {
-            particles.Emit(1);
+            isPouring = true;
         }
         if (transform.rotation.eulerAngles.x < -80)
         {
-            particles.Emit(1);
+            isPouring = true;
         }
         if (transform.rotation.eulerAngles.z > 80)
         {
-            particles.Emit(1);
+            isPouring = true;
         }
         if (transform.rotation.eulerAngles.z < -80)
         {
-            particles.Emit(1);
+            isPouring = true;
+        }
+
+        if (isPouring)
+        {
+            particles.Play();
+        }
+        else
+        {
+            particles.Pause();
+        }
+
+        if (triggered && isPouring)
+        {
+            IncreaseParticleCount();
         }
 
         if (particleCount > minParticleCount)
@@ -43,9 +58,14 @@ public class Pouring : MonoBehaviour
         }
     }
 
-    void Spill()
+    private void OnTriggerEnter(Collider other)
     {
-        spillLiquid = !spillLiquid;
+        triggered = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        triggered = false;
     }
 
     public void IncreaseParticleCount()
