@@ -9,9 +9,6 @@ public class Pouring : MonoBehaviour
     bool isPouring = false;
     bool triggered;
 
-    [SerializeField] private float minParticleCount;
-    private float particleCount;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -21,35 +18,43 @@ public class Pouring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.rotation.eulerAngles.x > 80)
+        if (transform.rotation.eulerAngles.x > 80 && transform.rotation.eulerAngles.x < 280)
         {
-            particles.Emit(1);
             isPouring = true;
+            Invoke("StopPouring", 1);
         }
-        if (transform.rotation.eulerAngles.x < -80)
+        if (transform.rotation.eulerAngles.x < -80 && transform.rotation.eulerAngles.x > -280)
         {
-            particles.Emit(1);
             isPouring = true;
+            Invoke("StopPouring", 1);
         }
-        if (transform.rotation.eulerAngles.z > 80)
+        if (transform.rotation.eulerAngles.z > 80 && transform.rotation.eulerAngles.z < 280)
         {
-            particles.Emit(1);
             isPouring = true;
+            Invoke("StopPouring", 1);
         }
-        if (transform.rotation.eulerAngles.z < -80)
+        if (transform.rotation.eulerAngles.z < -80 && transform.rotation.eulerAngles.z > -280)
         {
-            particles.Emit(1);
             isPouring = true;
+            Invoke("StopPouring", 1);
         }
 
+        if (isPouring)
+        {
+            particles.Emit(1);
+        }
+        
         if (triggered && isPouring)
         {
-            IncreaseParticleCount();
-        }
-
-        if (particleCount > minParticleCount)
-        {
             pouringTrigger.EnableFood();
+        }
+    }
+
+    void StopPouring()
+    {
+        if (isPouring)
+        {
+            isPouring = false;
         }
     }
 
@@ -61,10 +66,5 @@ public class Pouring : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         triggered = false;
-    }
-
-    public void IncreaseParticleCount()
-    {
-        particleCount += 1;
     }
 }
