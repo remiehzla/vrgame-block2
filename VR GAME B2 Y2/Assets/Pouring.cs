@@ -6,6 +6,7 @@ public class Pouring : MonoBehaviour
 {
     [SerializeField] private PouringTrigger pouringTrigger;
     private ParticleSystem particles;
+    [SerializeField] private Transform transformRef;
     bool isPouring = false;
     bool triggered;
 
@@ -13,27 +14,28 @@ public class Pouring : MonoBehaviour
     void Start()
     {
         particles = GetComponentInChildren<ParticleSystem>();
+        //transformRef = GetComponentInChildren<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.rotation.eulerAngles.x > 80 && transform.rotation.eulerAngles.x < 280)
+        if (transformRef.rotation.eulerAngles.x > 80 && transformRef.rotation.eulerAngles.x < 280)
         {
             isPouring = true;
             Invoke("StopPouring", 1);
         }
-        if (transform.rotation.eulerAngles.x < -80 && transform.rotation.eulerAngles.x > -280)
+        if (transformRef.rotation.eulerAngles.x < -80 && transformRef.rotation.eulerAngles.x > -280)
         {
             isPouring = true;
             Invoke("StopPouring", 1);
         }
-        if (transform.rotation.eulerAngles.z > 80 && transform.rotation.eulerAngles.z < 280)
+        if (transformRef.rotation.eulerAngles.z > 80 && transformRef.rotation.eulerAngles.z < 280)
         {
             isPouring = true;
             Invoke("StopPouring", 1);
         }
-        if (transform.rotation.eulerAngles.z < -80 && transform.rotation.eulerAngles.z > -280)
+        if (transformRef.rotation.eulerAngles.z < -80 && transformRef.rotation.eulerAngles.z > -280)
         {
             isPouring = true;
             Invoke("StopPouring", 1);
@@ -60,11 +62,17 @@ public class Pouring : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        triggered = true;
+        if (other.gameObject.GetComponent<PouringTrigger>() == pouringTrigger)
+        {
+            triggered = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        triggered = false;
+        if (other.gameObject.GetComponent<PouringTrigger>() == pouringTrigger)
+        {
+            triggered = false;
+        }
     }
 }
