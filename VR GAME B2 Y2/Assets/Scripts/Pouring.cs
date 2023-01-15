@@ -10,14 +10,11 @@ public class Pouring : MonoBehaviour
     bool isPouring = false;
     bool triggered;
 
-    // Start is called before the first frame update
     void Start()
     {
         particles = GetComponentInChildren<ParticleSystem>();
-        //transformRef = GetComponentInChildren<Transform>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (transformRef.rotation.eulerAngles.x > 80 && transformRef.rotation.eulerAngles.x < 280)
@@ -40,16 +37,19 @@ public class Pouring : MonoBehaviour
             isPouring = true;
             Invoke("StopPouring", 1);
         }
+        // Check if the X and Z rotation are right for the liquid to pour out. Stop pouring after a second to check again.
 
         if (isPouring)
         {
             particles.Emit(1);
         }
+        // If the liquid can be poured out, emit particles to visualize this.
         
         if (triggered && isPouring)
         {
             pouringTrigger.EnableFood();
         }
+        // If the object collides with its desegnated trigger, access the trigger script to enable its food/ingredient.
     }
 
     void StopPouring()
@@ -58,6 +58,7 @@ public class Pouring : MonoBehaviour
         {
             isPouring = false;
         }
+        // Stop pouring if the X and Z rotation no longer allow for it.
     }
 
     private void OnTriggerEnter(Collider other)
@@ -67,7 +68,6 @@ public class Pouring : MonoBehaviour
             triggered = true;
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.GetComponent<PouringTrigger>() == pouringTrigger)
@@ -75,4 +75,5 @@ public class Pouring : MonoBehaviour
             triggered = false;
         }
     }
+    // Check if the object collides with its desegnated trigger.
 }
