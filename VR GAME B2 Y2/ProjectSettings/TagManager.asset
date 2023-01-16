@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fluid
   - PouringTrigger
+  - Whisk
   layers:
   - Default
   - TransparentFX
