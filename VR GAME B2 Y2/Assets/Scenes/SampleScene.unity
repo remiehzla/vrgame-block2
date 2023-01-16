@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 22328903}
   - component: {fileID: 22328902}
   - component: {fileID: 22328905}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PouringTrigger
   m_TagString: PouringTrigger
   m_Icon: {fileID: 0}
@@ -7648,7 +7648,7 @@ GameObject:
   - component: {fileID: 656682881}
   - component: {fileID: 656682880}
   - component: {fileID: 656682879}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: FlourTrigger
   m_TagString: PouringTrigger
   m_Icon: {fileID: 0}
@@ -24367,7 +24367,7 @@ GameObject:
   - component: {fileID: 1102261254}
   - component: {fileID: 1102261253}
   - component: {fileID: 1102261252}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: MilkTrigger
   m_TagString: PouringTrigger
   m_Icon: {fileID: 0}
@@ -25623,7 +25623,7 @@ GameObject:
   - component: {fileID: 1379320849}
   - component: {fileID: 1379320848}
   - component: {fileID: 1379320847}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: OilTrigger
   m_TagString: PouringTrigger
   m_Icon: {fileID: 0}
