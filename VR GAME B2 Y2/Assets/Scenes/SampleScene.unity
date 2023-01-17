@@ -1496,7 +1496,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0f4a75c1940cd3e4bb33801349219cb7,
         type: 3}
       propertyPath: m_Name
-      value: Flour (1)
+      value: Flour
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f4a75c1940cd3e4bb33801349219cb7, type: 3}
@@ -34974,6 +34974,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2289524127063387503, guid: 4409881beb22f02438b9a184f4a07c23,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ebe9fb1535806ec4cbae267e94a80186, type: 2}
+    - target: {fileID: 2289524127063387503, guid: 4409881beb22f02438b9a184f4a07c23,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: ebe9fb1535806ec4cbae267e94a80186, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4409881beb22f02438b9a184f4a07c23, type: 3}
 --- !u!1001 &674300174764877051
