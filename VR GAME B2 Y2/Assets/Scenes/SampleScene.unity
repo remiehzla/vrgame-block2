@@ -31910,7 +31910,7 @@ GameObject:
   - component: {fileID: 1604625662}
   - component: {fileID: 1604625661}
   m_Layer: 0
-  m_Name: HandGrabInteractable (1)
+  m_Name: HandGrabInteractable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31983,7 +31983,7 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
-  _pointableElement: {fileID: 0}
+  _pointableElement: {fileID: 332904102}
   _rigidbody: {fileID: 915687774}
   _resetGrabOnGrabsUpdated: 1
   _physicsGrabbable: {fileID: 0}
@@ -32176,8 +32176,8 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
-  _pointableElement: {fileID: 0}
-  _rigidbody: {fileID: 915687774}
+  _pointableElement: {fileID: 332904102}
+  _rigidbody: {fileID: 332904105}
   _resetGrabOnGrabsUpdated: 1
   _physicsGrabbable: {fileID: 0}
   _scoringModifier:
