@@ -1662,7 +1662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointable: {fileID: 0}
+  _pointable: {fileID: 332904102}
   _whenRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -1697,7 +1697,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -3262789968867269347, guid: 026bf44cf8dde164fa6508b17101bd9a, type: 3}
+  m_Mesh: {fileID: -3262789968867269347, guid: 0f4a75c1940cd3e4bb33801349219cb7, type: 3}
 --- !u!54 &332904105
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29952,6 +29952,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8862bea98fed5448c81a6a656d69cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1278541961 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3645699230140503879, guid: 0f4a75c1940cd3e4bb33801349219cb7,
+    type: 3}
+  m_PrefabInstance: {fileID: 332904095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1278701725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31937,7 +31943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622db80eec0bd344f920b1aa056ae8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _relativeTo: {fileID: 915687773}
+  _relativeTo: {fileID: 1278541961}
   _surface: {fileID: 0}
   _usesHandPose: 1
   _handPose:
@@ -32130,7 +32136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622db80eec0bd344f920b1aa056ae8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _relativeTo: {fileID: 915687773}
+  _relativeTo: {fileID: 1278541961}
   _surface: {fileID: 0}
   _usesHandPose: 1
   _handPose:
