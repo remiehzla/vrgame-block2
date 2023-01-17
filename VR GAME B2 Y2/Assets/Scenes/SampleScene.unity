@@ -1019,6 +1019,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &233501211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7224181252871754078, guid: 3b30391c1db9edc42b4c93c04ea56ec7,
+    type: 3}
+  m_PrefabInstance: {fileID: 674300174764877051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &233989214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18448,6 +18454,58 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 674300174764877051}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &915687778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233501211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointable: {fileID: 915687779}
+  _whenRelease:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenMove:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenCancel:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &915687779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233501211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transferOnSecondSelection: 0
+  _addNewPointsToFront: 0
+  _forwardElement: {fileID: 0}
+  _oneGrabTransformer: {fileID: 0}
+  _twoGrabTransformer: {fileID: 0}
+  _maxGrabPoints: -1
 --- !u!4 &940849544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2588925041195329606, guid: 6c55e6853bbc1a6488fad71f420edffa,
@@ -26101,7 +26159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointable: {fileID: 0}
+  _pointable: {fileID: 1483895944}
   _whenRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -29641,8 +29699,7 @@ PrefabInstance:
       propertyPath: _pointableElement
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 674300175196028025, guid: 3b30391c1db9edc42b4c93c04ea56ec7,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: _pointable
       value: 
       objectReference: {fileID: 0}
@@ -29911,11 +29968,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 674300175196028025, guid: 3b30391c1db9edc42b4c93c04ea56ec7, type: 3}
-    - {fileID: 674300175196028024, guid: 3b30391c1db9edc42b4c93c04ea56ec7, type: 3}
-    - {fileID: 674300175217405784, guid: 3b30391c1db9edc42b4c93c04ea56ec7, type: 3}
-    - {fileID: 674300175217405785, guid: 3b30391c1db9edc42b4c93c04ea56ec7, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b30391c1db9edc42b4c93c04ea56ec7, type: 3}
 --- !u!54 &720563704077991518
 Rigidbody:
