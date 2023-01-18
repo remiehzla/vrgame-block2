@@ -19,6 +19,7 @@ public class Mixing : MonoBehaviour
         if (triggerCount >= neededTriggerCount)
         {
             EnableMixture();
+            // If the whisk has collided with the triggers often enough, enable the mixture object.
         }
     }
 
@@ -28,6 +29,7 @@ public class Mixing : MonoBehaviour
         {
             triggerCount += 1;
             EnableNextTrigger();
+            // If the object colliding with the trigger is a whisk, increase the trigger count and move the trigger.
         }
     }
 
@@ -53,6 +55,7 @@ public class Mixing : MonoBehaviour
             trigger2.enabled = true;
             trigger1.enabled = false;
         }
+        // Enable the next trigger based on which one is currently enabled.
     }
 
     void EnableMixture()
