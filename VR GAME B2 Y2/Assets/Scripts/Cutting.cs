@@ -8,18 +8,6 @@ public class Cutting : MonoBehaviour
     GameObject parent;
     public GameObject prefab;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         // If the knife collides with one of the slices
@@ -33,8 +21,6 @@ public class Cutting : MonoBehaviour
                                       Random.Range(-2f, 2f));
 
             other.gameObject.GetComponent<Rigidbody>().AddForce(randomAngle * Random.Range(.3f, .6f), ForceMode.Impulse);
-
-            // Need to think how to add HGI as childs
         }
     }
 }
