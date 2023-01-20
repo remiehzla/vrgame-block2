@@ -18,4 +18,9 @@ public class Flipping : MonoBehaviour
             animator.SetTrigger("Flip");
         }
     }
+
+    public void MakeGrabbable()
+    {
+        gameObject.tag = "SpatulaGrabbable";
+    }
 }

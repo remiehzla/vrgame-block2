@@ -8,6 +8,7 @@ TagManager:
   - PouringTrigger
   - Whisk
   - Spatula
+  - SpatulaGrabbable
   layers:
   - Default
   - TransparentFX
