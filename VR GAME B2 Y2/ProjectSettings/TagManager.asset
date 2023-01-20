@@ -9,6 +9,7 @@ TagManager:
   - Whisk
   - Spatula
   - SpatulaGrabbable
+  - Mixture
   layers:
   - Default
   - TransparentFX

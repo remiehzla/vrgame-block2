@@ -5,6 +5,7 @@ using UnityEngine;
 public class Flipping : MonoBehaviour
 {
     private Animator animator;
+    private bool flippable = false;
 
     private void Start()
     {
@@ -13,10 +14,15 @@ public class Flipping : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Spatula"))
+        if (other.CompareTag("Spatula") && flippable)
         {
             animator.SetTrigger("Flip");
         }
+    }
+
+    public void MakeFlippable()
+    {
+        flippable = true;
     }
 
     public void MakeGrabbable()
