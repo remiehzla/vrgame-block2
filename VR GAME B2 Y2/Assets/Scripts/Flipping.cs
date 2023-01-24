@@ -7,6 +7,9 @@ public class Flipping : MonoBehaviour
     private Animator animator;
     private bool flippable = false;
 
+    public LeaderBoard leaderBoard;
+    public PosesTracker posesTracker;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -28,5 +31,13 @@ public class Flipping : MonoBehaviour
     public void MakeGrabbable()
     {
         gameObject.tag = "SpatulaGrabbable";
+        StartCoroutine(ScoreSave());
+    }
+
+    public IEnumerator ScoreSave()
+    {
+        yield return new WaitForSeconds(2f);
+        yield return leaderBoard.SubmitScoreRoutine(posesTracker.numberOfPoses);
+        Debug.Log("Uploaded");
     }
 }
