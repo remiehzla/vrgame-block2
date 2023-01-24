@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FryMeat : MonoBehaviour
 {    
     private MeshRenderer meatMat;
     private bool isCooked = false;
+
+    [SerializeField] private AudioSource cookSound;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +27,7 @@ public class FryMeat : MonoBehaviour
             StartCoroutine(CookTimer());
             Debug.Log("Started Cooking");
             this.gameObject.transform.SetParent(other.gameObject.transform, true);
+            cookSound.Play();
         }
     }
 

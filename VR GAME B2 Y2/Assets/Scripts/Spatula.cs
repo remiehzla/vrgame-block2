@@ -13,9 +13,9 @@ public class Spatula : MonoBehaviour
     {
         if (other.CompareTag("SpatulaGrabbable") && isHolding == false)
         {
-            other.transform.SetParent(foodTransform);
-            grabbedFood = other.transform;
             isHolding = true;
+            grabbedFood = other.transform;
+            grabbedFood.transform.SetParent(foodTransform);
         }
     }
 }
