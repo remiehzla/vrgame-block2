@@ -15,6 +15,7 @@ public class Cutting : MonoBehaviour
         if (other.gameObject.layer == 9)
         {
             //Let the pieces move, add a little force to them 
+            other.gameObject.GetComponent<BoxCollider>().isTrigger = false;
             other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             other.gameObject.GetComponent<Rigidbody>().AddTorque(-Vector3.up * 1f, ForceMode.Impulse);
             randomAngle = new Vector3(Random.Range(-.8f, -2f),
