@@ -19103,11 +19103,11 @@ MonoBehaviour:
   _rotationAxis: 1
   _constraints:
     MinAngle:
-      Constrain: 0
+      Constrain: 1
       Value: 0
     MaxAngle:
-      Constrain: 0
-      Value: 0
+      Constrain: 1
+      Value: 90
 --- !u!64 &747938908
 MeshCollider:
   m_ObjectHideFlags: 0
