@@ -7,6 +7,8 @@ public class Flipping : MonoBehaviour
     private Animator animator;
     private bool flippable = false;
 
+    [SerializeField] private AudioSource flipSound;
+
     public LeaderBoard leaderBoard;
     public PosesTracker posesTracker;
 
@@ -20,6 +22,7 @@ public class Flipping : MonoBehaviour
         if (other.CompareTag("Spatula") && flippable)
         {
             animator.SetTrigger("Flip");
+            flipSound.Play();
         }
     }
 

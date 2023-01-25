@@ -7,6 +7,7 @@ public class EggSmashing : MonoBehaviour
     [SerializeField] private GameObject egg1;
     [SerializeField] private GameObject egg2;
     [SerializeField] private Transform eggTransform;
+
     private Rigidbody rigidbody;
 
     [SerializeField] private float breakSpeed = 50;
